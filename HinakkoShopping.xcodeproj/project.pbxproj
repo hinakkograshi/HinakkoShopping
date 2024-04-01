@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		531D65582BBB04620003EE60 /* HinakkoShoppingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65572BBB04620003EE60 /* HinakkoShoppingApp.swift */; };
+		531D655A2BBB04620003EE60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65592BBB04620003EE60 /* ContentView.swift */; };
+		531D655C2BBB04630003EE60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531D655B2BBB04630003EE60 /* Assets.xcassets */; };
+		531D655F2BBB04630003EE60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531D655E2BBB04630003EE60 /* Preview Assets.xcassets */; };
+		531D65692BBB04630003EE60 /* HinakkoShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65682BBB04630003EE60 /* HinakkoShoppingTests.swift */; };
+		531D65732BBB04630003EE60 /* HinakkoShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */; };
+		531D65752BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		531D65652BBB04630003EE60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 531D654C2BBB04620003EE60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 531D65532BBB04620003EE60;
+			remoteInfo = HinakkoShopping;
+		};
+		531D656F2BBB04630003EE60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 531D654C2BBB04620003EE60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 531D65532BBB04620003EE60;
+			remoteInfo = HinakkoShopping;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		531D65542BBB04620003EE60 /* HinakkoShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HinakkoShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D65572BBB04620003EE60 /* HinakkoShoppingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingApp.swift; sourceTree = "<group>"; };
+		531D65592BBB04620003EE60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		531D655B2BBB04630003EE60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		531D655E2BBB04630003EE60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		531D65642BBB04630003EE60 /* HinakkoShoppingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HinakkoShoppingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D65682BBB04630003EE60 /* HinakkoShoppingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingTests.swift; sourceTree = "<group>"; };
+		531D656E2BBB04630003EE60 /* HinakkoShoppingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HinakkoShoppingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITests.swift; sourceTree = "<group>"; };
+		531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		531D65512BBB04620003EE60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D65612BBB04630003EE60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D656B2BBB04630003EE60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		531D654B2BBB04620003EE60 = {
+			isa = PBXGroup;
+			children = (
+				531D65562BBB04620003EE60 /* HinakkoShopping */,
+				531D65672BBB04630003EE60 /* HinakkoShoppingTests */,
+				531D65712BBB04630003EE60 /* HinakkoShoppingUITests */,
+				531D65552BBB04620003EE60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		531D65552BBB04620003EE60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				531D65542BBB04620003EE60 /* HinakkoShopping.app */,
+				531D65642BBB04630003EE60 /* HinakkoShoppingTests.xctest */,
+				531D656E2BBB04630003EE60 /* HinakkoShoppingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		531D65562BBB04620003EE60 /* HinakkoShopping */ = {
+			isa = PBXGroup;
+			children = (
+				531D65572BBB04620003EE60 /* HinakkoShoppingApp.swift */,
+				531D65592BBB04620003EE60 /* ContentView.swift */,
+				531D655B2BBB04630003EE60 /* Assets.xcassets */,
+				531D655D2BBB04630003EE60 /* Preview Content */,
+			);
+			path = HinakkoShopping;
+			sourceTree = "<group>";
+		};
+		531D655D2BBB04630003EE60 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				531D655E2BBB04630003EE60 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		531D65672BBB04630003EE60 /* HinakkoShoppingTests */ = {
+			isa = PBXGroup;
+			children = (
+				531D65682BBB04630003EE60 /* HinakkoShoppingTests.swift */,
+			);
+			path = HinakkoShoppingTests;
+			sourceTree = "<group>";
+		};
+		531D65712BBB04630003EE60 /* HinakkoShoppingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */,
+				531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */,
+			);
+			path = HinakkoShoppingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		531D65532BBB04620003EE60 /* HinakkoShopping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531D65782BBB04630003EE60 /* Build configuration list for PBXNativeTarget "HinakkoShopping" */;
+			buildPhases = (
+				531D65502BBB04620003EE60 /* Sources */,
+				531D65512BBB04620003EE60 /* Frameworks */,
+				531D65522BBB04620003EE60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HinakkoShopping;
+			productName = HinakkoShopping;
+			productReference = 531D65542BBB04620003EE60 /* HinakkoShopping.app */;
+			productType = "com.apple.product-type.application";
+		};
+		531D65632BBB04630003EE60 /* HinakkoShoppingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531D657B2BBB04630003EE60 /* Build configuration list for PBXNativeTarget "HinakkoShoppingTests" */;
+			buildPhases = (
+				531D65602BBB04630003EE60 /* Sources */,
+				531D65612BBB04630003EE60 /* Frameworks */,
+				531D65622BBB04630003EE60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				531D65662BBB04630003EE60 /* PBXTargetDependency */,
+			);
+			name = HinakkoShoppingTests;
+			productName = HinakkoShoppingTests;
+			productReference = 531D65642BBB04630003EE60 /* HinakkoShoppingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		531D656D2BBB04630003EE60 /* HinakkoShoppingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531D657E2BBB04630003EE60 /* Build configuration list for PBXNativeTarget "HinakkoShoppingUITests" */;
+			buildPhases = (
+				531D656A2BBB04630003EE60 /* Sources */,
+				531D656B2BBB04630003EE60 /* Frameworks */,
+				531D656C2BBB04630003EE60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				531D65702BBB04630003EE60 /* PBXTargetDependency */,
+			);
+			name = HinakkoShoppingUITests;
+			productName = HinakkoShoppingUITests;
+			productReference = 531D656E2BBB04630003EE60 /* HinakkoShoppingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		531D654C2BBB04620003EE60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					531D65532BBB04620003EE60 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					531D65632BBB04630003EE60 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 531D65532BBB04620003EE60;
+					};
+					531D656D2BBB04630003EE60 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 531D65532BBB04620003EE60;
+					};
+				};
+			};
+			buildConfigurationList = 531D654F2BBB04620003EE60 /* Build configuration list for PBXProject "HinakkoShopping" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 531D654B2BBB04620003EE60;
+			productRefGroup = 531D65552BBB04620003EE60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				531D65532BBB04620003EE60 /* HinakkoShopping */,
+				531D65632BBB04630003EE60 /* HinakkoShoppingTests */,
+				531D656D2BBB04630003EE60 /* HinakkoShoppingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		531D65522BBB04620003EE60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D655F2BBB04630003EE60 /* Preview Assets.xcassets in Resources */,
+				531D655C2BBB04630003EE60 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D65622BBB04630003EE60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D656C2BBB04630003EE60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		531D65502BBB04620003EE60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D655A2BBB04620003EE60 /* ContentView.swift in Sources */,
+				531D65582BBB04620003EE60 /* HinakkoShoppingApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D65602BBB04630003EE60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D65692BBB04630003EE60 /* HinakkoShoppingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D656A2BBB04630003EE60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D65752BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift in Sources */,
+				531D65732BBB04630003EE60 /* HinakkoShoppingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		531D65662BBB04630003EE60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 531D65532BBB04620003EE60 /* HinakkoShopping */;
+			targetProxy = 531D65652BBB04630003EE60 /* PBXContainerItemProxy */;
+		};
+		531D65702BBB04630003EE60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 531D65532BBB04620003EE60 /* HinakkoShopping */;
+			targetProxy = 531D656F2BBB04630003EE60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		531D65762BBB04630003EE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		531D65772BBB04630003EE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		531D65792BBB04630003EE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HinakkoShopping/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinaf0224.HinakkoShopping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		531D657A2BBB04630003EE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HinakkoShopping/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinaf0224.HinakkoShopping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		531D657C2BBB04630003EE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinaf0224.HinakkoShoppingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HinakkoShopping.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HinakkoShopping";
+			};
+			name = Debug;
+		};
+		531D657D2BBB04630003EE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinaf0224.HinakkoShoppingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HinakkoShopping.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HinakkoShopping";
+			};
+			name = Release;
+		};
+		531D657F2BBB04630003EE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinaf0224.HinakkoShoppingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HinakkoShopping;
+			};
+			name = Debug;
+		};
+		531D65802BBB04630003EE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinaf0224.HinakkoShoppingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HinakkoShopping;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		531D654F2BBB04620003EE60 /* Build configuration list for PBXProject "HinakkoShopping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D65762BBB04630003EE60 /* Debug */,
+				531D65772BBB04630003EE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		531D65782BBB04630003EE60 /* Build configuration list for PBXNativeTarget "HinakkoShopping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D65792BBB04630003EE60 /* Debug */,
+				531D657A2BBB04630003EE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		531D657B2BBB04630003EE60 /* Build configuration list for PBXNativeTarget "HinakkoShoppingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D657C2BBB04630003EE60 /* Debug */,
+				531D657D2BBB04630003EE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		531D657E2BBB04630003EE60 /* Build configuration list for PBXNativeTarget "HinakkoShoppingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D657F2BBB04630003EE60 /* Debug */,
+				531D65802BBB04630003EE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 531D654C2BBB04620003EE60 /* Project object */;
+}
