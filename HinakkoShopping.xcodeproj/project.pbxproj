@@ -15,6 +15,8 @@
 		531D65732BBB04630003EE60 /* HinakkoShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */; };
 		531D65752BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */; };
 		53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A704792BBB0CA50049595D /* ShoppingCell.swift */; };
+		53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */; };
+		53C802362BBB6A810052BD4C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802352BBB6A810052BD4C /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITests.swift; sourceTree = "<group>"; };
 		531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53A704792BBB0CA50049595D /* ShoppingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCell.swift; sourceTree = "<group>"; };
+		53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewModel.swift; sourceTree = "<group>"; };
+		53C802352BBB6A810052BD4C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				531D65572BBB04620003EE60 /* HinakkoShoppingApp.swift */,
-				531D65592BBB04620003EE60 /* ShoppingView.swift */,
-				53A704792BBB0CA50049595D /* ShoppingCell.swift */,
+				53C802342BBB69F00052BD4C /* Model */,
+				53C802322BBB69A30052BD4C /* View */,
+				53C802332BBB69C40052BD4C /* ViewModel */,
 				531D655B2BBB04630003EE60 /* Assets.xcassets */,
 				531D655D2BBB04630003EE60 /* Preview Content */,
 			);
@@ -128,6 +133,31 @@
 				531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */,
 			);
 			path = HinakkoShoppingUITests;
+			sourceTree = "<group>";
+		};
+		53C802322BBB69A30052BD4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				531D65592BBB04620003EE60 /* ShoppingView.swift */,
+				53A704792BBB0CA50049595D /* ShoppingCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53C802332BBB69C40052BD4C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		53C802342BBB69F00052BD4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53C802352BBB6A810052BD4C /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C802362BBB6A810052BD4C /* Item.swift in Sources */,
 				531D655A2BBB04620003EE60 /* ShoppingView.swift in Sources */,
 				53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */,
+				53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */,
 				531D65582BBB04620003EE60 /* HinakkoShoppingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
