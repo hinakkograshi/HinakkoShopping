@@ -15,8 +15,10 @@
 		531D65732BBB04630003EE60 /* HinakkoShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */; };
 		531D65752BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */; };
 		53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A704792BBB0CA50049595D /* ShoppingCell.swift */; };
+		53C6A0152BC105E900D8F4E0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53C6A0142BC105E900D8F4E0 /* Kingfisher */; };
 		53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */; };
 		53C802362BBB6A810052BD4C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802352BBB6A810052BD4C /* Item.swift */; };
+		53EA6CB62BBE08D2009FBADA /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA6CB52BBE08D2009FBADA /* APIClientError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		53A704792BBB0CA50049595D /* ShoppingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCell.swift; sourceTree = "<group>"; };
 		53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewModel.swift; sourceTree = "<group>"; };
 		53C802352BBB6A810052BD4C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		53EA6CB52BBE08D2009FBADA /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C6A0152BC105E900D8F4E0 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */,
+				53EA6CB52BBE08D2009FBADA /* APIClientError.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,6 +181,9 @@
 			dependencies = (
 			);
 			name = HinakkoShopping;
+			packageProductDependencies = (
+				53C6A0142BC105E900D8F4E0 /* Kingfisher */,
+			);
 			productName = HinakkoShopping;
 			productReference = 531D65542BBB04620003EE60 /* HinakkoShopping.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +256,9 @@
 				Base,
 			);
 			mainGroup = 531D654B2BBB04620003EE60;
+			packageReferences = (
+				53C6A0132BC105E900D8F4E0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 531D65552BBB04620003EE60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,6 +305,7 @@
 				531D655A2BBB04620003EE60 /* ShoppingView.swift in Sources */,
 				53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */,
 				53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */,
+				53EA6CB62BBE08D2009FBADA /* APIClientError.swift in Sources */,
 				531D65582BBB04620003EE60 /* HinakkoShoppingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +630,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53C6A0132BC105E900D8F4E0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53C6A0142BC105E900D8F4E0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53C6A0132BC105E900D8F4E0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 531D654C2BBB04620003EE60 /* Project object */;
 }

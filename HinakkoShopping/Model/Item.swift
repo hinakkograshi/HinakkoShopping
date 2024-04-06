@@ -7,17 +7,18 @@
 
 import Foundation
 
-struct Item: Decodable {
-    let shoppingItem: [ShoppingItem]
+struct ItemsObject: Decodable {
+    let items: [Items]
 }
 
-struct ShoppingItem: Decodable, Identifiable {
-    let id = UUID()
+struct Items: Decodable, Identifiable {
+    let id: Int
     let name: String
     let category: String
     let imageName: String
 
     enum CodingKeys: String, CodingKey {
+        case id = "id"
         case name = "name"
         case category = "category"
         case imageName = "image_name"
@@ -25,6 +26,7 @@ struct ShoppingItem: Decodable, Identifiable {
 
     init(from decoder: any Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(Int.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
         category = try values.decode(String.self, forKey: .category)
         imageName = try values.decode(String.self, forKey: .imageName)
