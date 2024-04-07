@@ -36,7 +36,7 @@ extension ShoppingViewModel {
             throw APIClientError.badStatus(statusCode: httpStatus.statusCode)
         }
     }
-
+    
     func fetchItemImgString(id: Int) -> String {
         let itemImg = "\(baseUrlString)/image/\(id)"
         return itemImg

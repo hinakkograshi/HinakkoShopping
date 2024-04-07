@@ -11,7 +11,9 @@ import SwiftUI
 struct HinakkoShoppingApp: App {
     var body: some Scene {
         WindowGroup {
-            ShoppingView()
+            NavigationStack {
+                ShoppingView()
+            }
         }
     }
 }

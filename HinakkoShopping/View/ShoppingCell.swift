@@ -37,4 +37,3 @@ struct ShoppingCell: View {
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
-

@@ -5,8 +5,6 @@
 //  Created by Hina on 2024/04/02.
 //
 
-import Foundation
-
 struct ItemsObject: Decodable {
     let items: [Items]
 }
