@@ -12,15 +12,17 @@ struct ShoppingView: View {
     @ObservedObject var viewModel = ShoppingViewModel()
     @State private var searchText = ""
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: gridItems,
-                      spacing: 20,
-                      content: {
-                ForEach(searchResults) { item in
-                    ShoppingCell(items: item)
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: gridItems,
+                          spacing: 20,
+                          content: {
+                    ForEach(searchResults) { item in
+                        ShoppingCell(items: item)
+                    }
                 }
+                )
             }
-            )
         }
         .task { @MainActor in
             do {
