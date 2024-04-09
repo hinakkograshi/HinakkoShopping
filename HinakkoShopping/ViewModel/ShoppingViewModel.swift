@@ -13,6 +13,16 @@ final class ShoppingViewModel: ObservableObject {
 }
 
 extension ShoppingViewModel {
+//    func postItem() async throws -> [Items] {
+//        let postItemUrlString = "\(baseUrlString)/items"
+//        guard let url = URL(string: postItemUrlString) else {
+//            throw APIClientError.invalidURL
+//        }
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        let (data, response) = try await URLSession.shared.data(for: request)
+//    }
+
     func fetchAllItems() async throws -> [Items] {
         let allItemsUrlString = "\(baseUrlString)/items"
         guard let url = URL(string: allItemsUrlString) else {

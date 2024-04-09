@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ExhibitView: View {
+    @State var showSheet = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: { showSheet = true}) {
+            RoundedRectangle(cornerRadius: 100)
+                .fill(.orange)
+                .frame(width: 80, height: 80)
+                .overlay {
+                    Image(systemName: "camera")
+                        .font(.system(size: 50, weight: .bold))
+                        .foregroundStyle(.white)
+                }
+        }
+        .sheet(isPresented: $showSheet) {
+            PostView()
+        }
     }
 }
 

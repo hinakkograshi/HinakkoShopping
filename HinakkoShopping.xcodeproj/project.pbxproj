@@ -14,6 +14,9 @@
 		531D65692BBB04630003EE60 /* HinakkoShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65682BBB04630003EE60 /* HinakkoShoppingTests.swift */; };
 		531D65732BBB04630003EE60 /* HinakkoShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */; };
 		531D65752BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */; };
+		5356533E2BC4BD240057841C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356533D2BC4BD240057841C /* ImagePicker.swift */; };
+		535653402BC4DF500057841C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356533F2BC4DF500057841C /* PostView.swift */; };
+		535653422BC550FC0057841C /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535653412BC550FC0057841C /* PostViewModel.swift */; };
 		53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A704792BBB0CA50049595D /* ShoppingCell.swift */; };
 		53C6A0152BC105E900D8F4E0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53C6A0142BC105E900D8F4E0 /* Kingfisher */; };
 		53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */; };
@@ -51,6 +54,9 @@
 		531D656E2BBB04630003EE60 /* HinakkoShoppingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HinakkoShoppingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITests.swift; sourceTree = "<group>"; };
 		531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5356533D2BC4BD240057841C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5356533F2BC4DF500057841C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		535653412BC550FC0057841C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		53A704792BBB0CA50049595D /* ShoppingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCell.swift; sourceTree = "<group>"; };
 		53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewModel.swift; sourceTree = "<group>"; };
 		53C802352BBB6A810052BD4C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -150,6 +156,8 @@
 				531D65592BBB04620003EE60 /* ShoppingView.swift */,
 				53A704792BBB0CA50049595D /* ShoppingCell.swift */,
 				53C8039E2BC436790090BD92 /* ExhibitView.swift */,
+				5356533F2BC4DF500057841C /* PostView.swift */,
+				5356533D2BC4BD240057841C /* ImagePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */,
+				535653412BC550FC0057841C /* PostViewModel.swift */,
 				53EA6CB52BBE08D2009FBADA /* APIClientError.swift */,
 			);
 			path = ViewModel;
@@ -310,10 +319,13 @@
 				53C802362BBB6A810052BD4C /* Item.swift in Sources */,
 				531D655A2BBB04620003EE60 /* ShoppingView.swift in Sources */,
 				53C8039D2BC433470090BD92 /* ContentView.swift in Sources */,
+				5356533E2BC4BD240057841C /* ImagePicker.swift in Sources */,
 				53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */,
 				53C8039F2BC436790090BD92 /* ExhibitView.swift in Sources */,
 				53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */,
+				535653422BC550FC0057841C /* PostViewModel.swift in Sources */,
 				53EA6CB62BBE08D2009FBADA /* APIClientError.swift in Sources */,
+				535653402BC4DF500057841C /* PostView.swift in Sources */,
 				531D65582BBB04620003EE60 /* HinakkoShoppingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

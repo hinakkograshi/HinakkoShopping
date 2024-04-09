@@ -36,7 +36,7 @@ struct ShoppingView: View {
         .keyboardType(.default)
         .scrollDismissesKeyboard(.immediately)
     }
-
+    
     var searchResults: [Items] {
         if searchText.isEmpty {
             return viewModel.allItems
