@@ -13,16 +13,6 @@ final class ShoppingViewModel: ObservableObject {
 }
 
 extension ShoppingViewModel {
-//    func postItem() async throws -> [Items] {
-//        let postItemUrlString = "\(baseUrlString)/items"
-//        guard let url = URL(string: postItemUrlString) else {
-//            throw APIClientError.invalidURL
-//        }
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
-//        let (data, response) = try await URLSession.shared.data(for: request)
-//    }
-
     func fetchAllItems() async throws -> [Items] {
         let allItemsUrlString = "\(baseUrlString)/items"
         guard let url = URL(string: allItemsUrlString) else {
@@ -35,10 +25,13 @@ extension ShoppingViewModel {
         }
         switch httpStatus.statusCode {
         case 200 ..< 400:
-            guard let responseData = try? JSONDecoder().decode(ItemsObject.self, from: data) else {
+            let jsonDecoder = JSONDecoder()
+            jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+            guard let responseData = try? jsonDecoder.decode(ItemsObject.self, from: data) else {
                 throw APIClientError.decodeFailed
             }
             let itemsData = responseData.items
+            print("⭐️\(itemsData)")
             return itemsData
         case 400...:
             throw APIClientError.badStatus(statusCode: httpStatus.statusCode)

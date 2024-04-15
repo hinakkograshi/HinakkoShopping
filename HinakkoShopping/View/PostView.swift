@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PostView: View {
+    let postVM = PostViewModel()
+    @ObservedObject var viewModel = ShoppingViewModel()
     @State var showingImagePicker = false
     @State var image: UIImage?
     @State var itemName = ""
@@ -62,7 +64,18 @@ struct PostView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("出品する") {
-                        dismiss()
+                        guard let image = image else {
+                            print("エラーアラート:写真を追加してね！")
+                            return
+                        }
+                        Task {
+                            do {
+                                try postVM.upLoad(name: itemName, category: categoryName, image: image)
+                                dismiss()
+                            } catch {
+                                print("エンコードエラー")
+                            }
+                        }
                     }
                 }
             }
