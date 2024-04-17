@@ -13,7 +13,7 @@ final class PostViewModel: ObservableObject {
 }
 
 extension PostViewModel {
-    func upLoad(name: String, category: String, image: UIImage) async throws {
+    func upLoad(name: String, category: String, image: UIImage) throws {
         let imageData = image.jpegData(compressionQuality: 1.0)
         guard let imageData = imageData else {
             throw ImageError.invalid

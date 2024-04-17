@@ -68,14 +68,12 @@ struct PostView: View {
                             print("エラーアラート:写真を追加してね！")
                             return
                         }
-                        Task {
                             do {
-                                try await postVM.upLoad(name: itemName, category: categoryName, image: image)
+                                try postVM.upLoad(name: itemName, category: categoryName, image: image)
                                 dismiss()
                             } catch {
                                 print("POSTError")
                             }
-                        }
                     }
                 }
             }
