@@ -8,5 +8,5 @@
 import Foundation
 
 enum ImageError: LocalizedError {
-    case invalidImage
+    case invalid
 }

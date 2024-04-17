@@ -16,8 +16,7 @@ extension PostViewModel {
     func upLoad(name: String, category: String, image: UIImage) async throws {
         let imageData = image.jpegData(compressionQuality: 1.0)
         guard let imageData = imageData else {
-            print("imageをData型に変換できない")
-            return
+            throw ImageError.invalid
         }
         let nameData = name.data(using: .utf8)!
         let categoryData = category.data(using: .utf8)!
@@ -36,19 +35,22 @@ extension PostViewModel {
                 print(statusCode)
                 do {
                     switch statusCode {
-                    case 200 ..< 400:
-                        print("成功")
-                    case 400 ..< 500:
-                        throw APIClientError.networkError
-                        print("エラー")
-                    case 500...:
-                        throw APIClientError.networkError
-                        print("サーバーエラー")
+                    case 100 ... 199:
+                        throw APIClientError.informational
+                    case 200 ..< 299:
+                        break
+//                        throw APIClientError.successful
+                    case 300 ..< 399:
+                        throw APIClientError.redirection
+                    case 400 ..< 499:
+                        throw APIClientError.clientError
+                    case 500 ..< 599:
+                        throw APIClientError.serverError
                     default:
-                        print("error")
+                        throw APIClientError.invalid
                     }
                 } catch {
-
+                    print("エラー")
                 }
             }
     }

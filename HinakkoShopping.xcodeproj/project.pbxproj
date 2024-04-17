@@ -14,6 +14,7 @@
 		531D65692BBB04630003EE60 /* HinakkoShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65682BBB04630003EE60 /* HinakkoShoppingTests.swift */; };
 		531D65732BBB04630003EE60 /* HinakkoShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */; };
 		531D65752BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */; };
+		5346661D2BCFF59200A7B49C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5346661C2BCFF59200A7B49C /* APIError.swift */; };
 		5356533E2BC4BD240057841C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356533D2BC4BD240057841C /* ImagePicker.swift */; };
 		535653402BC4DF500057841C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356533F2BC4DF500057841C /* PostView.swift */; };
 		535653422BC550FC0057841C /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535653412BC550FC0057841C /* PostViewModel.swift */; };
@@ -54,6 +55,7 @@
 		531D656E2BBB04630003EE60 /* HinakkoShoppingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HinakkoShoppingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITests.swift; sourceTree = "<group>"; };
 		531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5346661C2BCFF59200A7B49C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		5356533D2BC4BD240057841C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5356533F2BC4DF500057841C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		535653412BC550FC0057841C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				535653412BC550FC0057841C /* PostViewModel.swift */,
 				53EA6CB52BBE08D2009FBADA /* APIClientError.swift */,
 				535B61582BC9F27D00F0ED51 /* ImageError.swift */,
+				5346661C2BCFF59200A7B49C /* APIError.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				53EA6CB62BBE08D2009FBADA /* APIClientError.swift in Sources */,
 				535653402BC4DF500057841C /* PostView.swift in Sources */,
 				531D65582BBB04620003EE60 /* HinakkoShoppingApp.swift in Sources */,
+				5346661D2BCFF59200A7B49C /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

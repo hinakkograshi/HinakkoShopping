@@ -16,27 +16,32 @@ extension ShoppingViewModel {
     func fetchAllItems() async throws -> [Items] {
         let allItemsUrlString = "\(baseUrlString)/items"
         guard let url = URL(string: allItemsUrlString) else {
-            throw APIClientError.invalidURL
+            throw APIError.invalidURL
         }
         let urlRequest = URLRequest(url: url)
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         guard let httpStatus = response as? HTTPURLResponse else {
-            throw APIClientError.responseError
+            throw APIError.responseError
         }
         switch httpStatus.statusCode {
-        case 200 ..< 400:
+        case 100 ... 199:
+            throw APIClientError.informational
+        case 200 ..< 299:
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             guard let responseData = try? jsonDecoder.decode(ItemsObject.self, from: data) else {
-                throw APIClientError.decodeFailed
+                throw APIError.decodeFailed
             }
             let itemsData = responseData.items
-            print("⭐️\(itemsData)")
             return itemsData
-        case 400...:
-            throw APIClientError.badStatus(statusCode: httpStatus.statusCode)
+        case 300 ..< 399:
+            throw APIClientError.redirection
+        case 400 ..< 499:
+            throw APIClientError.clientError
+        case 500 ..< 599:
+            throw APIClientError.serverError
         default:
-            throw APIClientError.badStatus(statusCode: httpStatus.statusCode)
+            throw APIClientError.invalid
         }
     }
     

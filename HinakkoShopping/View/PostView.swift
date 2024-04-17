@@ -70,10 +70,10 @@ struct PostView: View {
                         }
                         Task {
                             do {
-                                try postVM.upLoad(name: itemName, category: categoryName, image: image)
+                                try await postVM.upLoad(name: itemName, category: categoryName, image: image)
                                 dismiss()
                             } catch {
-                                print("エンコードエラー")
+                                print("POSTError")
                             }
                         }
                     }
