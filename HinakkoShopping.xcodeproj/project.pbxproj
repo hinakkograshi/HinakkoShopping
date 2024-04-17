@@ -14,10 +14,16 @@
 		531D65692BBB04630003EE60 /* HinakkoShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65682BBB04630003EE60 /* HinakkoShoppingTests.swift */; };
 		531D65732BBB04630003EE60 /* HinakkoShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */; };
 		531D65752BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */; };
+		5346661D2BCFF59200A7B49C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5346661C2BCFF59200A7B49C /* APIError.swift */; };
+		5356533E2BC4BD240057841C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356533D2BC4BD240057841C /* ImagePicker.swift */; };
+		535653402BC4DF500057841C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356533F2BC4DF500057841C /* PostView.swift */; };
+		535653422BC550FC0057841C /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535653412BC550FC0057841C /* PostViewModel.swift */; };
+		535B61592BC9F27D00F0ED51 /* ImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535B61582BC9F27D00F0ED51 /* ImageError.swift */; };
+		535B61AD2BCC15C700F0ED51 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 535B61AC2BCC15C700F0ED51 /* Alamofire */; };
 		53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A704792BBB0CA50049595D /* ShoppingCell.swift */; };
 		53C6A0152BC105E900D8F4E0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53C6A0142BC105E900D8F4E0 /* Kingfisher */; };
 		53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */; };
-		53C802362BBB6A810052BD4C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802352BBB6A810052BD4C /* Item.swift */; };
+		53C802362BBB6A810052BD4C /* ItemsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C802352BBB6A810052BD4C /* ItemsObject.swift */; };
 		53EA6CB62BBE08D2009FBADA /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA6CB52BBE08D2009FBADA /* APIClientError.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +55,14 @@
 		531D656E2BBB04630003EE60 /* HinakkoShoppingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HinakkoShoppingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		531D65722BBB04630003EE60 /* HinakkoShoppingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITests.swift; sourceTree = "<group>"; };
 		531D65742BBB04630003EE60 /* HinakkoShoppingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinakkoShoppingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5346661C2BCFF59200A7B49C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		5356533D2BC4BD240057841C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5356533F2BC4DF500057841C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		535653412BC550FC0057841C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		535B61582BC9F27D00F0ED51 /* ImageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageError.swift; sourceTree = "<group>"; };
 		53A704792BBB0CA50049595D /* ShoppingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCell.swift; sourceTree = "<group>"; };
 		53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewModel.swift; sourceTree = "<group>"; };
-		53C802352BBB6A810052BD4C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		53C802352BBB6A810052BD4C /* ItemsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsObject.swift; sourceTree = "<group>"; };
 		53EA6CB52BBE08D2009FBADA /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53C6A0152BC105E900D8F4E0 /* Kingfisher in Frameworks */,
+				535B61AD2BCC15C700F0ED51 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +156,8 @@
 			children = (
 				531D65592BBB04620003EE60 /* ShoppingView.swift */,
 				53A704792BBB0CA50049595D /* ShoppingCell.swift */,
+				5356533F2BC4DF500057841C /* PostView.swift */,
+				5356533D2BC4BD240057841C /* ImagePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,7 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				53C802302BBB658F0052BD4C /* ShoppingViewModel.swift */,
+				535653412BC550FC0057841C /* PostViewModel.swift */,
 				53EA6CB52BBE08D2009FBADA /* APIClientError.swift */,
+				535B61582BC9F27D00F0ED51 /* ImageError.swift */,
+				5346661C2BCFF59200A7B49C /* APIError.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,7 +177,7 @@
 		53C802342BBB69F00052BD4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				53C802352BBB6A810052BD4C /* Item.swift */,
+				53C802352BBB6A810052BD4C /* ItemsObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +200,7 @@
 			name = HinakkoShopping;
 			packageProductDependencies = (
 				53C6A0142BC105E900D8F4E0 /* Kingfisher */,
+				535B61AC2BCC15C700F0ED51 /* Alamofire */,
 			);
 			productName = HinakkoShopping;
 			productReference = 531D65542BBB04620003EE60 /* HinakkoShopping.app */;
@@ -258,6 +276,7 @@
 			mainGroup = 531D654B2BBB04620003EE60;
 			packageReferences = (
 				53C6A0132BC105E900D8F4E0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				535B61AB2BCC15C700F0ED51 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 531D65552BBB04620003EE60 /* Products */;
 			projectDirPath = "";
@@ -301,12 +320,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53C802362BBB6A810052BD4C /* Item.swift in Sources */,
+				53C802362BBB6A810052BD4C /* ItemsObject.swift in Sources */,
 				531D655A2BBB04620003EE60 /* ShoppingView.swift in Sources */,
+				5356533E2BC4BD240057841C /* ImagePicker.swift in Sources */,
 				53A7047A2BBB0CA50049595D /* ShoppingCell.swift in Sources */,
 				53C802312BBB658F0052BD4C /* ShoppingViewModel.swift in Sources */,
+				535653422BC550FC0057841C /* PostViewModel.swift in Sources */,
+				535B61592BC9F27D00F0ED51 /* ImageError.swift in Sources */,
 				53EA6CB62BBE08D2009FBADA /* APIClientError.swift in Sources */,
+				535653402BC4DF500057841C /* PostView.swift in Sources */,
 				531D65582BBB04620003EE60 /* HinakkoShoppingApp.swift in Sources */,
+				5346661D2BCFF59200A7B49C /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HinakkoShopping/Preview Content\"";
+				DEVELOPMENT_TEAM = R5LVVTG62Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -498,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HinakkoShopping/Preview Content\"";
+				DEVELOPMENT_TEAM = R5LVVTG62Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -632,6 +658,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		535B61AB2BCC15C700F0ED51 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 		53C6A0132BC105E900D8F4E0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -643,6 +677,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		535B61AC2BCC15C700F0ED51 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 535B61AB2BCC15C700F0ED51 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		53C6A0142BC105E900D8F4E0 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 53C6A0132BC105E900D8F4E0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
