@@ -20,6 +20,9 @@ extension PostViewModel {
         }
         let nameData = name.data(using: .utf8)!
         let categoryData = category.data(using: .utf8)!
+        //upLoad complitionHandler responseString内
+        //withCheckedThrowingcontignation
+        //comp受け取るメソッドを作る
         AF.upload(
             multipartFormData: {(multipartFormData) in
                 // 文字データ
@@ -50,8 +53,9 @@ extension PostViewModel {
                         throw APIClientError.invalid
                     }
                 } catch {
-                    print("エラー")
+                    print("\(statusCode)エラー")
                 }
             }
+        print("スコープ抜けます")
     }
 }
