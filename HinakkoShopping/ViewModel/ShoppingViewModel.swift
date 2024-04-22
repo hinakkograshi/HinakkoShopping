@@ -46,7 +46,7 @@ extension ShoppingViewModel {
         }
         print("スコープ抜けます")
     }
-    
+
     func fetchItemImgString(id: Int) -> String {
         let itemImg = "\(baseUrlString)/image/\(id)"
         return itemImg

@@ -15,7 +15,7 @@ struct PostView: View {
     @State var itemName = ""
     @State var categoryName = ""
     @Environment(\.dismiss) private var dismiss
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -68,12 +68,12 @@ struct PostView: View {
                             print("エラーアラート:写真を追加してね！")
                             return
                         }
-                            do {
-                                try postVM.upLoad(name: itemName, category: categoryName, image: image)
-                                dismiss()
-                            } catch {
-                                print("POSTError")
-                            }
+                        do {
+                            try postVM.upLoad(name: itemName, category: categoryName, image: image)
+                            dismiss()
+                        } catch {
+                            print("POSTError")
+                        }
                     }
                 }
             }

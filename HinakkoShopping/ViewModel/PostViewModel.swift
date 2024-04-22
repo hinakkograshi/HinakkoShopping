@@ -21,7 +21,7 @@ extension PostViewModel {
         let nameData = name.data(using: .utf8)!
         let categoryData = category.data(using: .utf8)!
         //upLoad complitionHandler responseString内
-        //withCheckedThrowingcontignation
+        //withCheckedThrowingContinuation
         //comp受け取るメソッドを作る
         AF.upload(
             multipartFormData: {(multipartFormData) in
@@ -42,7 +42,7 @@ extension PostViewModel {
                         throw APIClientError.informational
                     case 200 ..< 299:
                         break
-//                        throw APIClientError.successful
+                        //                        throw APIClientError.successful
                     case 300 ..< 399:
                         throw APIClientError.redirection
                     case 400 ..< 499:

@@ -43,15 +43,15 @@ struct ShoppingView: View {
                         }
                 }
                 .sheet(isPresented: $showSheet, onDismiss: {
-                        Task {
-                            do {
-                                let item = try await viewModel.fetchAllItems()
-                                viewModel.allItems = item
-                            } catch {
-                                print("⭐️\(error)")
-                            }
+                    Task {
+                        do {
+                            let item = try await viewModel.fetchAllItems()
+                            viewModel.allItems = item
+                        } catch {
+                            print("⭐️\(error)")
                         }
-                    }) {
+                    }
+                }) {
                     PostView()
                 }
                 .padding([.trailing, .bottom], 15)
