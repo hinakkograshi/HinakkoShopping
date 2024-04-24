@@ -10,19 +10,16 @@ import Alamofire
 
 final class PostViewModel: ObservableObject {
     let baseURL = "http://127.0.0.1:9000/items"
+    let headers: HTTPHeaders = [
+        "Content-type": "multipart/form-data"
+    ]
 }
-
 extension PostViewModel {
-    func upLoad(name: String, category: String, image: UIImage) throws {
-        let imageData = image.jpegData(compressionQuality: 1.0)
-        guard let imageData = imageData else {
-            throw ImageError.invalid
-        }
+    func upLoad(name: String, category: String, image: UIImage, success: @escaping () -> Void, failure: @escaping () -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
         let nameData = name.data(using: .utf8)!
         let categoryData = category.data(using: .utf8)!
-        //upLoad complitionHandler responseString内
-        //withCheckedThrowingContinuation
-        //comp受け取るメソッドを作る
+        
         AF.upload(
             multipartFormData: {(multipartFormData) in
                 // 文字データ
@@ -33,29 +30,14 @@ extension PostViewModel {
             },
             to: baseURL,
             method: .post,
-            headers: nil).responseString { response in
-                guard let statusCode = response.response?.statusCode else {return}
-                print(statusCode)
-                do {
-                    switch statusCode {
-                    case 100 ... 199:
-                        throw APIClientError.informational
-                    case 200 ..< 299:
-                        break
-                        //                        throw APIClientError.successful
-                    case 300 ..< 399:
-                        throw APIClientError.redirection
-                    case 400 ..< 499:
-                        throw APIClientError.clientError
-                    case 500 ..< 599:
-                        throw APIClientError.serverError
-                    default:
-                        throw APIClientError.invalid
-                    }
-                } catch {
-                    print("\(statusCode)エラー")
+            headers: headers).responseString { response in
+                switch response.result {
+                case .success(let result):
+                    success()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    failure()
                 }
             }
-        print("スコープ抜けます")
     }
 }

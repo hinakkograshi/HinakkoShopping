@@ -23,7 +23,6 @@ extension ShoppingViewModel {
         guard let httpStatus = response as? HTTPURLResponse else {
             throw APIError.responseError
         }
-        print("❤️\(httpStatus.statusCode)")
         switch httpStatus.statusCode {
         case 100 ... 199:
             throw APIClientError.informational
@@ -44,7 +43,6 @@ extension ShoppingViewModel {
         default:
             throw APIClientError.invalid
         }
-        print("スコープ抜けます")
     }
 
     func fetchItemImgString(id: Int) -> String {
