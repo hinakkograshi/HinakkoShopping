@@ -26,7 +26,7 @@ extension ShoppingViewModel {
         switch httpStatus.statusCode {
         case 100 ... 199:
             throw APIClientError.informational
-        case 200 ..< 299:
+        case 200 ... 299:
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             guard let responseData = try? jsonDecoder.decode(ItemsObject.self, from: data) else {
@@ -34,17 +34,17 @@ extension ShoppingViewModel {
             }
             let itemsData = responseData.items
             return itemsData
-        case 300 ..< 399:
+        case 300 ... 399:
             throw APIClientError.redirection
-        case 400 ..< 499:
+        case 400 ... 499:
             throw APIClientError.clientError
-        case 500 ..< 599:
+        case 500 ... 599:
             throw APIClientError.serverError
         default:
             throw APIClientError.invalid
         }
     }
-    
+
     func fetchItemImgString(id: Int) -> String {
         let itemImg = "\(baseUrlString)/image/\(id)"
         return itemImg

@@ -16,24 +16,32 @@ struct ShoppingCell: View {
             KFImage(URL(string: viewModel.fetchItemImgString(id: items.id)))
                 .resizable()
                 .scaledToFit()
-                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                .padding(20)
+                .frame(width: 150, height: 150)
+                .padding(10)
             VStack {
-                Text(items.name)
-                    .font(.headline)
-                Text(items.category)
-                    .font(.subheadline.bold())
-                    .foregroundStyle(.black)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.white.opacity(0.5))
-                    }
+                HStack {
+                    Text("name:")
+                        .font(.headline)
+                    Text(items.name)
+                        .font(.headline)
+                }
+                HStack {
+                    Text("category:")
+                        .font(.subheadline.bold())
+                    Text(items.category)
+                        .font(.subheadline.bold())
+                        .foregroundStyle(.black)
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 8)
+                        .background {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.white.opacity(0.7))
+                        }
+                }
             }
         }
-        .padding(.bottom, 10)
-        .background(.yellow)
+        .padding(.vertical, 10)
+        .background(.yellow.gradient)
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

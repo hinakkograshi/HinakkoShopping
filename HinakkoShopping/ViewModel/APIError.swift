@@ -11,4 +11,5 @@ enum APIError: LocalizedError {
     case invalidURL
     case responseError
     case decodeFailed
+    case hinakko
 }
