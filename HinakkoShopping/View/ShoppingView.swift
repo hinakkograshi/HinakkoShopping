@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ShoppingView: View {
-    @State var showSheet = false
     private let gridItems: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
-    @ObservedObject var viewModel = ShoppingViewModel()
-    @State private var searchText = ""
+    @StateObject var shoppingVM = ShoppingViewModel()
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -19,14 +17,14 @@ struct ShoppingView: View {
                           spacing: 20,
                           content: {
                     ForEach(searchResults) { item in
-                        ShoppingCell(items: item)
+                        ShoppingCell(item: item, shoppingVM: shoppingVM)
                     }
                 }
                 )
             }
             .overlay(alignment: .bottomTrailing) {
                 Button(action: {
-                    showSheet = true
+                    shoppingVM.showSheet = true
                 }) {
                     RoundedRectangle(cornerRadius: 100)
                         .fill(.pink)
@@ -42,14 +40,9 @@ struct ShoppingView: View {
                             }
                         }
                 }
-                .sheet(isPresented: $showSheet, onDismiss: {
+                .sheet(isPresented: $shoppingVM.showSheet, onDismiss: {
                     Task {
-                        do {
-                            let item = try await viewModel.fetchAllItems()
-                            viewModel.allItems = item
-                        } catch {
-                            print("⭐️\(error)")
-                        }
+                        await shoppingVM.getAllitems()
                     }
                 }) {
                     PostView()
@@ -58,24 +51,19 @@ struct ShoppingView: View {
             }
         }
         .task {
-            do {
-                let item = try await viewModel.fetchAllItems()
-                viewModel.allItems = item
-            } catch {
-                print("⭐️\(error)")
-            }
+                await shoppingVM.getAllitems()
         }
-        .searchable(text: $searchText, prompt: "キーワード検索")
+        .searchable(text: $shoppingVM.searchText, prompt: "キーワード検索")
         .keyboardType(.default)
         .scrollDismissesKeyboard(.immediately)
     }
     
-    var searchResults: [Items] {
-        if searchText.isEmpty {
-            return viewModel.allItems
+    var searchResults: [Item] {
+        if shoppingVM.searchText.isEmpty {
+            return shoppingVM.allItems
         } else {
-            return viewModel.allItems.filter {
-                $0.name.contains(searchText)
+            return shoppingVM.allItems.filter {
+                $0.name.contains(shoppingVM.searchText)
             }
         }
     }

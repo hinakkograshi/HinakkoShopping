@@ -10,7 +10,6 @@ import PhotosUI
 
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
-    
     func makeUIViewController(context: Context) -> some PHPickerViewController {
         var configuration = PHPickerConfiguration()
         configuration.filter = .images
@@ -37,10 +36,13 @@ struct ImagePicker: UIViewControllerRepresentable {
             for image in results {
                 image.itemProvider.loadObject(ofClass: UIImage.self,
                                               completionHandler: { (image, error) in
-                    if let image = image as? UIImage {
-                        self.parent.image = image
+                    DispatchQueue.main.async {
+                        if let image = image as? UIImage {
+                            self.parent.image = image
+                        }
                     }
-                })
+                }
+                )
             }
         }
     }

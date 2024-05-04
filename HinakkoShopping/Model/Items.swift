@@ -5,13 +5,12 @@
 //  Created by Hina on 2024/04/02.
 //
 
-struct ItemsObject: Decodable {
-    let items: [Items]
+struct Items: Decodable {
+    let items: [Item]
 }
 
-struct Items: Decodable, Identifiable {
+struct Item: Decodable, Identifiable {
     let id: Int
     let name: String
     let category: String
-    let imageName: String
 }

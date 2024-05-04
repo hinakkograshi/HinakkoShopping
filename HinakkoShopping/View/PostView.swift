@@ -8,21 +8,15 @@
 import SwiftUI
 
 struct PostView: View {
-    let postVM = PostViewModel()
-    @ObservedObject var viewModel = ShoppingViewModel()
-    @State var showingImagePicker = false
-    @State var image: UIImage?
-    @State var itemName = ""
-    @State var categoryName = ""
+    @StateObject var postVM = PostViewModel()
     @Environment(\.dismiss) private var dismiss
-    
     var body: some View {
         NavigationStack {
             VStack {
                 Button(action: {
-                    showingImagePicker = true
+                    postVM.showingImagePicker = true
                 }) {
-                    if let image = self.image {
+                    if let image = postVM.image {
                         Image(uiImage: image)
                             .resizable()
                             .frame(width: 300, height: 300)
@@ -38,18 +32,18 @@ struct PostView: View {
                     }
                 }
                 .padding(.vertical, 50)
-                .sheet(isPresented: $showingImagePicker, content: {
-                    ImagePicker(image: $image)
+                .sheet(isPresented: $postVM.showingImagePicker, content: {
+                    ImagePicker(image: $postVM.image)
                 })
                 Grid(alignment: .leading, verticalSpacing: 30) {
                     GridRow {
                         Text("商品名")
-                        TextField("商品名を入力", text: $itemName)
+                        TextField("商品名を入力", text: $postVM.itemName)
                             .textFieldStyle(.roundedBorder)
                     }
                     GridRow {
                         Text("カテゴリー")
-                        TextField("カテゴリーを入力", text: $categoryName)
+                        TextField("カテゴリーを入力", text: $postVM.categoryName)
                             .textFieldStyle(.roundedBorder)
                     }
                 }
@@ -64,17 +58,9 @@ struct PostView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("出品する") {
-                        guard let image = image else {
-                            print("エラーアラート:写真を追加してね！")
-                            return
-                        }
-                        postVM.upLoad(name: itemName, category: categoryName, image: image, success: {
+                        postVM.didTappedPostButtan {
                             dismiss()
-                        },
-                            failure: {
-                            print("アラート表示")
-                        })
-
+                        }
                     }
                 }
             }
