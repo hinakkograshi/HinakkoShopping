@@ -9,11 +9,14 @@ import SwiftUI
 import Kingfisher
 
 struct ShoppingCell: View {
-    let items: Items
-    @ObservedObject var viewModel = ShoppingViewModel()
+    let item: Item
+    @ObservedObject var shoppingVM: ShoppingViewModel
     var body: some View {
         VStack {
-            KFImage(URL(string: viewModel.fetchItemImgString(id: items.id)))
+            //🟥
+            let imgURL = try! shoppingVM.getItemImg(id: item.id)
+
+            KFImage(imgURL)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
@@ -22,13 +25,13 @@ struct ShoppingCell: View {
                 HStack {
                     Text("name:")
                         .font(.headline)
-                    Text(items.name)
+                    Text(item.name)
                         .font(.headline)
                 }
                 HStack {
                     Text("category:")
                         .font(.subheadline.bold())
-                    Text(items.category)
+                    Text(item.category)
                         .font(.subheadline.bold())
                         .foregroundStyle(.black)
                         .padding(.horizontal, 5)
